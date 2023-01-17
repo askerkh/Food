@@ -37,7 +37,7 @@ function modal(modalSelector, triggerSelector) {
     function showModalByScroll() {
         if(document.documentElement.scrollTop + 
             document.documentElement.clientHeight == document.documentElement.scrollHeight) {
-            openModal();
+            openModal(modalSelector);
             window.removeEventListener('scroll', showModalByScroll );
             clearInterval(modalTimerID);
         }
